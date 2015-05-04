@@ -27,7 +27,25 @@
 		<td id="9"></td>
 	</tr>
 </table>
+		
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script>
+		var count = 0
+		$("td").on('click', function(){
+			if(count % 2 === 0){
+				$(this).html('X');
+			}else{
+				$(this).html('O');
+			}
+			$(this).off('click');
+			count ++;
+      checkboard();
+		})
+    
+    
 
+
+</script>
 
 </body>
 </html>
