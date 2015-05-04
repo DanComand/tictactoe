@@ -33,9 +33,9 @@
 		var count = 0
 		$("td").on('click', function(){
 			if(count % 2 === 0){
-				$(this).html('X').css("color", "red");
+				$(this).html('X').css("color", "#ff6961");
 			}else{
-				$(this).html('O').css("color", "blue");
+				$(this).html('O').css("color", "#448AFF");
 			}
 			$(this).off('click');
 			count ++;
