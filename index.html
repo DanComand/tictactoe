@@ -10,21 +10,21 @@
 <h1>Tic Tac Toe</h1>
 <table>
 	<tr>
-		<td id="1"></td>
-		<td id="2"></td>
-		<td id="3"></td>
+		<td id="one"></td>
+		<td id="two"></td>
+		<td id="three"></td>
 	</tr>
 		
 	<tr>
-		<td id="4"></td>
-		<td id="5"></td>
-		<td id="6"></td>
+		<td id="four"></td>
+		<td id="five"></td>
+		<td id="six"></td>
 	</tr>
 
 	<tr>
-		<td id="7"></td>
-		<td id="8"></td>
-		<td id="9"></td>
+		<td id="seven"></td>
+		<td id="eight"></td>
+		<td id="nine"></td>
 	</tr>
 </table>
 		
@@ -33,19 +33,29 @@
 		var count = 0
 		$("td").on('click', function(){
 			if(count % 2 === 0){
-				$(this).html('X');
+				$(this).html('X').css("color", "red");
 			}else{
-				$(this).html('O');
+				$(this).html('O').css("color", "blue");
 			}
 			$(this).off('click');
 			count ++;
       checkboard();
 		})
     
-    
-
-
-</script>
-
-</body>
+    function checkboard(){
+      if($("#one").text() === "X" && $("#two").text() === "X" && $("#three").text() === "X" || $("#four").text() === "X" && $("#five").text() === "X" && $("#six").text() === "X" || $("#seven").text() === "X" && $("#eight").text() === "X" && $("#nine").text() === "X" || $("#one").text() === "X" && $("#four").text() === "X" && $("#seven").text() === "X" || $("#two").text() === "X" && $("#five").text() === "X" && $("#eight").text() === "X" || $("#three").text() === "X" && $("#six").text() === "X" && $("#nine").text() === "X" || $("#one").text() === "X" && $("#five").text() === "X" && $("#nine").text() === "X" || $("#three").text() === "X" && $("#five").text() === "X" && $("#seven").text() === "X")
+      {
+        alert("X' wins!");
+      }
+      else if($("#one").text() === "O" && $("#two").text() === "O" && $("#three").text() === "O" || $("#four").text() === "O" && $("#five").text() === "O" && $("#six").text() === "O" || $("#seven").text() === "O" && $("#eight").text() === "O" && $("#nine").text() === "O" || $("#one").text() === "O" && $("#four").text() === "O" && $("#seven").text() === "O" || $("#two").text() === "O" && $("#five").text() === "O" && $("#eight").text() === "O" || $("#three").text() === "O" && $("#six").text() === "O" && $("#nine").text() === "O" || $("#one").text() === "O" && $("#five").text() === "O" && $("#nine").text() === "O" || $("#three").text() === "O" && $("#five").text() === "O" && $("#seven").text() === "O")
+      {
+        alert("'O' wins!");
+      }
+      else if(count === 9)
+      {
+        alert("Tie!")
+      }
+    }
+		</script>
+ 	</body>
 </html>
