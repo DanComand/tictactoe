@@ -2,15 +2,102 @@ td {
 
 	width: 150px;
   height: 150px;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 	margin: 0 auto;
 	font-size: 7em;
 	text-align: center;
 	font-family: Helvetica;
 	font-weight: 100;
-	
+	padding: 0;
+
 
 }
+
+#one {
+
+
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+
+}
+
+#two {
+
+
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+/*border-left: 1px solid black;*/
+
+}
+
+
+#three {
+
+
+	border-bottom: 1px solid black;
+}
+
+
+#four {
+
+
+	border-right: 1px solid black;
+}
+
+
+#five {
+
+
+	border-right: 1px solid black;
+}
+
+
+
+#seven {
+
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+}
+
+
+
+#eight {
+
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+}
+
+#nine {
+
+	
+	border-top: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 table {
 

@@ -10,7 +10,7 @@
 <h1>Tic Tac Toe</h1>
 <table>
 	<tr>
-		<td id="one"></td>
+		<td id="one" data-cell="1"></td>
 		<td id="two"></td>
 		<td id="three"></td>
 	</tr>
@@ -26,6 +26,7 @@
 		<td id="eight"></td>
 		<td id="nine"></td>
 	</tr>
+
 </table>
 		
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -34,13 +35,16 @@
 		$("td").on('click', function(){
 			if(count % 2 === 0){
 				$(this).html('X').css("color", "#ff6961");
+
 			}else{
 				$(this).html('O').css("color", "#448AFF");
 			}
 			$(this).off('click');
 			count ++;
       checkboard();
+
 		})
+
     
     function checkboard(){
       if($("#one").text() === "X" && $("#two").text() === "X" && $("#three").text() === "X" || $("#four").text() === "X" && $("#five").text() === "X" && $("#six").text() === "X" || $("#seven").text() === "X" && $("#eight").text() === "X" && $("#nine").text() === "X" || $("#one").text() === "X" && $("#four").text() === "X" && $("#seven").text() === "X" || $("#two").text() === "X" && $("#five").text() === "X" && $("#eight").text() === "X" || $("#three").text() === "X" && $("#six").text() === "X" && $("#nine").text() === "X" || $("#one").text() === "X" && $("#five").text() === "X" && $("#nine").text() === "X" || $("#three").text() === "X" && $("#five").text() === "X" && $("#seven").text() === "X")
